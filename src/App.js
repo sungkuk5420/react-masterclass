@@ -5,19 +5,19 @@ const Father = styled.div`
 display:  flex;
 `;
 
-const Btn =styled.button`
-  color:white;
+const Input =styled.input.attrs({required:true,minLength:10})`
   background-color: tomato;
-  border-radius: 15px;
-  border: 0;
 `;
 
 
 
 function App() {
   return <Father as="header">
-    <Btn>Log in</Btn>
-    <Btn as="a" href="/">Log in</Btn>
+    <Input/>
+    <Input/>
+    <Input/>
+    <Input/>
+    <Input/>
   </Father>
 }
 
