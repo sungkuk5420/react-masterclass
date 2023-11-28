@@ -24,13 +24,28 @@ const Box = styled.div`
   height: 100px;
   background-color: tomato;
   animation:${rotateAnimation} 1s linear infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  span{
+    font-size: 25px;
+    &:hover{
+      font-size: 35px;
+    }
+  }
+  `;
+const SpanTag = styled.span`
+  font-size:18px;
 `;
 
 
 
 function App() {
   return <Wrapper as="header">
-    <Box/>
+    <Box>
+      <span>😁</span>
+      <SpanTag>abc</SpanTag>
+    </Box>
   </Wrapper>
 }
 
