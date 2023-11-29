@@ -1,23 +1,23 @@
 import styled from "styled-components";
 import {useState } from "react"
+const Container = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: ${props=>props.theme.bgColor};
+  `;
+const H1 = styled.h1`
+  color: ${props=>props.theme.textColor};
+`;
 
 function App() {
-  const [value,setValue] =useState("");
-  const onChange = (event:React.FormEvent<HTMLInputElement>) => {
-    console.log(event.currentTarget.value)
-    const {currentTarget:{value}} = event
-    setValue(value);
-  };
 
-  const onSubmit = (event:React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    console.log("hello",value)
-  }
   return <div>
-    <form onSubmit={onSubmit}>
-      <input onChange ={onChange} value={value} type="text" placeholder="username"></input>
-      <button>Log in</button>
-    </form>
+    <Container>
+      <H1>Hello</H1>
+    </Container>
   </div>
 }
 
