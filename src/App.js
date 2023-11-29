@@ -19,6 +19,14 @@ const rotateAnimation = keyframes`
     border-radius: 0px;
   }
 `;
+
+const Emoji = styled.span`
+  font-size:36px;
+  &:hover{
+    font-size:48px;
+  }
+`;
+
 const Box = styled.div`
   width: 100px;
   height: 100px;
@@ -27,25 +35,19 @@ const Box = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  span{
+  ${Emoji}{
     font-size: 25px;
     &:hover{
-      font-size: 35px;
+      font-size: 98px;
     }
   }
   `;
-const SpanTag = styled.span`
-  font-size:18px;
-`;
-
-
-
 function App() {
   return <Wrapper as="header">
     <Box>
-      <span>😁</span>
-      <SpanTag>abc</SpanTag>
+      <Emoji>😁</Emoji>
     </Box>
+    <Emoji>😁</Emoji>
   </Wrapper>
 }
 
